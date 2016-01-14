@@ -113,7 +113,7 @@ STATICFILES_DIRS = (
 
 WEBPACK_LOADER = {
   'DEFAULT': {
-    'BUNDLE_DIR_NAME': './',
+    'BUNDLE_DIR_NAME': './dist/js/',
     'STATS_FILE': os.path.join(BASE_DIR, 'static/webpack-stats.json'),
     'POLL_INTERVAL': 0.1,
     'IGNORE': ['.+\.hot-update.js', '.+\.map']
