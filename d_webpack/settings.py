@@ -103,17 +103,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+  os.path.join(BASE_DIR, 'static', 'dist'),
+  os.path.join(BASE_DIR, 'static', 'plugins'),
 )
-
-# WEBPACK_LOADER = {
-#     'BUNDLE_DIR_NAME': 'bundles/',
-#     'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
-# }
 
 WEBPACK_LOADER = {
   'DEFAULT': {
-    'BUNDLE_DIR_NAME': './dist/js/',
+    'BUNDLE_DIR_NAME': './js/',
     'STATS_FILE': os.path.join(BASE_DIR, 'static/webpack-stats.json'),
     'POLL_INTERVAL': 0.1,
     'IGNORE': ['.+\.hot-update.js', '.+\.map']
